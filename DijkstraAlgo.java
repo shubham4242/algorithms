@@ -18,6 +18,7 @@ public class DijkstraAlgo {
         edgesPQ.add(new int[]{start, 0});
         while (!edgesPQ.isEmpty()) {
             int node[] = edgesPQ.poll();
+            //this condition is important.
             visited[node[0]] = true;
             for (int i = 0; i < edges[node[0]].length; i++) {
                 int nextNode = edges[node[0]][i][0];
